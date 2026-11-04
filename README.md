@@ -9,7 +9,7 @@ Public, interactive analysis of serious-injury and fatal (KSI) collisions on Sea
 ```bash
 pip install -r requirements.txt
 # place raw files in data/raw/ (see data/README.md)
-cd src && python 01_audit.py && python 02_safety_models.py
+cd src && python 01_audit.py && python 02_safety_models.py && python 03_tract_crosswalk.py
 ```
 
 ## Data sources (so far)
@@ -18,6 +18,9 @@ cd src && python 01_audit.py && python 02_safety_models.py
 |---|---|---|
 | `SDOT_Collisions_All_Years.csv` | Seattle Open Data (SDOT/SPD collisions) | Downloaded Nov 2026; records through Oct 26, 2026 |
 | `Seattle_Streets.csv` | Seattle GIS open data (street segments) | Attributes and midpoints only, no line geometry |
+
+| `tl_2026_53_tract.*` | U.S. Census Bureau TIGER/Line 2026, Washington tracts | Public domain |
+| ACS B01003, B08301 (2020-2024 5-year) | U.S. Census Bureau, American Community Survey | Tract population; means of transportation to work (workers only) |
 
 Planned: FARS, WSDOT crash data, Vision Zero High Injury Network, Race and Social Equity Index, ACS commute data. Licenses will be listed here as each source is added.
 
