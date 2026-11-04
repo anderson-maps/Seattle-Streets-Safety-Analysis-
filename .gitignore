@@ -1,0 +1,11 @@
+# Raw downloads are large (collisions CSV is ~187 MB, above GitHub's 100 MB file limit); re-create with the pipeline
+data/raw/*
+!data/raw/.gitkeep
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# Processed outputs are rebuilt by the pipeline
+data/processed/*
+!data/processed/.gitkeep
